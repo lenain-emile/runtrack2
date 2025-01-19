@@ -10,14 +10,13 @@ foreach ($_GET as $cle => $valeur) {
 }
 echo "Nombre d'arguments passés via \$_GET : " . $nombre_arguments . "<br>";
 
-// Afficher les détails des arguments s'il y en a
 if ($nombre_arguments > 0) {
     echo "Détails des arguments :<br>";
     foreach ($_GET as $cle => $valeur) {
-        echo htmlspecialchars($cle) . " : " . htmlspecialchars($valeur) . "<br>";
+        echo $cle . " : " . $valeur . "<br>";
     }
 } else {
-    echo "Aucun argument passé via \$_GET.";
+    echo "Aucun argument passé via \$_GET. ";
 }
 ?>
 
